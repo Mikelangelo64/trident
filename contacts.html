@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>contacts</title>
+  <script defer src="script.js"></script><link href="styles.css" rel="stylesheet"></head>
+
+  <body>
+    <header class="header">
+      <div class="_container">
+        <div class="header__wrapper">
+          <div class="header__logo">
+            <a href="#" class="logo-link">
+              <img loading="lazy" src="./assets/img/logo.svg" alt="logo" />
+            </a>
+          </div>
+
+          <nav class="header__navigation menu _desk">
+            <ul class="menu__list">
+              <li class="li">
+                <a href="#" class="menu__item">Головна</a>
+              </li>
+
+              <li class="li additional">
+                <div class="additional__header">
+                  <a href="#" class="menu__item">Про нас</a>
+
+                  <button class="additional__label" aria-hidden="true">
+                    <img src="./assets/img/arrow-down.svg" alt="arrow" />
+                  </button>
+                </div>
+
+                <ul class="additional__body">
+                  <li class="additional__li">
+                    <a href="#" class="menu__item additional__item">
+                      Головна
+                    </a>
+                  </li>
+                  <li class="additional__li">
+                    <a href="#" class="menu__item additional__item">
+                      Продукція
+                    </a>
+                  </li>
+                  <li class="additional__li">
+                    <a href="#" class="menu__item additional__item">
+                      Про нас
+                    </a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="li additional">
+                <div class="additional__header">
+                  <a href="#" class="menu__item">Продукція</a>
+
+                  <button class="additional__label" aria-hidden="true">
+                    <img src="./assets/img/arrow-down.svg" alt="arrow" />
+                  </button>
+                </div>
+
+                <ul class="additional__body">
+                  <li class="additional__li">
+                    <a href="#" class="menu__item additional__item">
+                      Головна
+                    </a>
+                  </li>
+                  <li class="additional__li">
+                    <a href="#" class="menu__item additional__item">
+                      Продукція
+                    </a>
+                  </li>
+                  <li class="additional__li">
+                    <a href="#" class="menu__item additional__item">
+                      Про нас
+                    </a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="li">
+                <a href="#" class="menu__item">Портфоліо</a>
+              </li>
+              <li class="li">
+                <a href="#" class="menu__item">Контакти</a>
+              </li>
+              <li class="li">
+                <a href="#" class="menu__item">FAQ</a>
+              </li>
+            </ul>
+          </nav>
+
+          <div class="header__buttons">
+            <div class="call _desk">
+              <button class="call__btn popup-open" data-popup="_popup-call">
+                <img src="./assets/img/call.svg" alt="call" />
+              </button>
+
+              <div class="call__list">
+                <div class="call__item">
+                  <a href="#" class="call__messanger">
+                    <img
+                      src="./assets/img/contacts-telegram.svg"
+                      alt="telegram"
+                    />
+                  </a>
+                  <a href="tel:0961708080" class="call__phone"
+                    >+38 097 050 00 33</a
+                  >
+                </div>
+              </div>
+
+              <button
+                class="call__recall popup-open button-light"
+                data-popup="_popup-call"
+              >
+                <span>Передзвоніть мені</span>
+              </button>
+            </div>
+
+            <ul class="menu__lang">
+              <li>
+                <span class="lang-item lang-item-current">
+                  eng
+                  <img
+                    src="./assets/img/arrow-down.svg"
+                    alt="language toggle"
+                  />
+                </span>
+
+                <ul>
+                  <li
+                    class="lang-item lang-item-1 lang-item-en lang-item-first"
+                  >
+                    <a lang="rus-RU" hreflang="rus-RU" href="#1"> ua </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+
+            <button class="menu-burger popup-open" data-popup="_popup-menu">
+              <span></span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="popup popup-call"
+        data-popupname="_popup-call"
+        aria-modal="true"
+        role="dialog"
+      >
+        <div class="popup__overlay"></div>
+        <div class="popup__scroll">
+          <div class="popup__wrapper">
+            <button class="popup__close">
+              <img src="./assets/img/popup-close.svg" alt="close" />
+            </button>
+
+            <div class="popup__content">
+              <div class="popup__title__container">
+                <p class="popup__title">
+                  Замовити <br />
+                  зворотьній дзвінок
+                </p>
+                <p class="popup__subtitle">
+                  Залиште тут свої контактні дані і наш спеціаліст вам
+                  передзвонить.
+                </p>
+              </div>
+
+              <form action="post" class="popup-form">
+                <div>
+                  <label for="name">
+                    <strong>Ваше ім’я</strong>
+                    <input type="text" name="name" id="name" />
+                    <span class="wpcf7-not-valid-tip">Невірний формат</span>
+                  </label>
+
+                  <label for="telephone">
+                    <strong>Ваше телефон</strong>
+                    <input type="telephone" name="telephone" id="telephone" />
+                    <span class="wpcf7-not-valid-tip">Невірний формат</span>
+                  </label>
+                </div>
+
+                <p>
+                  <button type="submit"><span>Відправити</span></button>
+                </p>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="popup popup-thanks"
+        data-popupname="_popup-thanks"
+        aria-modal="true"
+        role="dialog"
+      >
+        <div class="popup__overlay"></div>
+        <div class="popup__scroll">
+          <div class="popup__wrapper">
+            <button class="popup__close">
+              <img src="./assets/img/popup-close.svg" alt="close" />
+            </button>
+
+            <div class="popup__bg">
+              <img src="./assets/img/popup-thanks.jpg" alt="thanks" />
+            </div>
+
+            <div class="popup__content">
+              <div class="popup__title__container">
+                <p class="popup__title">Дякуємо!</p>
+                <p class="popup__subtitle">
+                  Вашу заявку прийнято.<br />
+                  Ми зв’яжемося з вами найближчим часом.
+                </p>
+              </div>
+
+              <div class="popup__action">
+                <a href="#" class="popup__button button"
+                  ><span>На головну</span></a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="popup popup-menu fullscreen-phone"
+        data-popupname="_popup-menu"
+        aria-modal="true"
+        role="dialog"
+      >
+        <div class="popup__overlay"></div>
+        <div class="popup__scroll">
+          <div class="popup__wrapper">
+            <button class="popup__close">
+              <img src="./assets/img/popup-close.svg" alt="close" />
+            </button>
+
+            <div class="popup__content">
+              <nav class="menu _mobile">
+                <ul class="menu__list">
+                  <li class="li">
+                    <a href="#" class="menu__item">Головна</a>
+                  </li>
+
+                  <li class="li additional">
+                    <div class="additional__header">
+                      <a href="#" class="menu__item">Про нас</a>
+
+                      <button class="additional__label" aria-hidden="true">
+                        <img src="./assets/img/arrow-down.svg" alt="arrow" />
+                      </button>
+                    </div>
+
+                    <div class="additional__body">
+                      <ul class="additional__body__inner">
+                        <li class="additional__li">
+                          <a href="#" class="menu__item additional__item">
+                            Головна
+                          </a>
+                        </li>
+                        <li class="additional__li">
+                          <a href="#" class="menu__item additional__item">
+                            Продукція
+                          </a>
+                        </li>
+                        <li class="additional__li">
+                          <a href="#" class="menu__item additional__item">
+                            Про нас
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+
+                  <li class="li additional">
+                    <div class="additional__header">
+                      <a href="#" class="menu__item">Продукція</a>
+
+                      <button class="additional__label" aria-hidden="true">
+                        <img src="./assets/img/arrow-down.svg" alt="arrow" />
+                      </button>
+                    </div>
+
+                    <div class="additional__body">
+                      <ul class="additional__body__inner">
+                        <li class="additional__li">
+                          <a href="#" class="menu__item additional__item">
+                            Головна
+                          </a>
+                        </li>
+                        <li class="additional__li">
+                          <a href="#" class="menu__item additional__item">
+                            Продукція
+                          </a>
+                        </li>
+                        <li class="additional__li">
+                          <a href="#" class="menu__item additional__item">
+                            Про нас
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+
+                  <li>
+                    <a href="#" class="menu__item">Портфоліо</a>
+                  </li>
+                  <li class="li">
+                    <a href="#" class="menu__item">Контакти</a>
+                  </li>
+                  <li class="li">
+                    <a href="#" class="menu__item">FAQ</a>
+                  </li>
+                </ul>
+              </nav>
+
+              <div class="call">
+                <div class="call__list">
+                  <div class="call__item">
+                    <a href="#" class="call__messanger">
+                      <img
+                        src="./assets/img/contacts-telegram.svg"
+                        alt="telegram"
+                      />
+                    </a>
+                    <a href="tel:0961708080" class="call__phone"
+                      >+38 097 050 00 33</a
+                    >
+                  </div>
+                </div>
+
+                <button
+                  class="call__recall popup-open button-light"
+                  data-popup="_popup-call"
+                >
+                  <span>Передзвоніть мені</span>
+                </button>
+              </div>
+              <!-- <div class="popup__subtitle">
+                      <p>
+                          By clicking the "send" button, you agree to the
+                          and consent to the processing of personal data
+                      </p>
+                  </div> -->
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="popup popup-video"
+        data-popupname="_popup-video-0"
+        aria-modal="true"
+        role="dialog"
+      >
+        <div class="popup__overlay"></div>
+        <div class="popup__scroll">
+          <div class="popup__wrapper">
+            <button class="popup__close">
+              <img src="./assets/img/popup-close-white.svg" alt="close" />
+            </button>
+
+            <div class="popup__content popup-video__content">
+              <div class="popup-video__media">
+                <!-- <div class="popup-video__media__container"> -->
+                <video
+                  disablePictureInPicture
+                  preload="metadata"
+                  playsinline
+                  controls
+                >
+                  <source src="./assets/video/about.mp4" type="video/mp4" />
+                </video>
+                <!-- </div> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="breadcrumbs__container _container">
+      <div class="breadcrumbs">
+        <span>
+          <span>
+            <a href="#">Головна</a>
+            -
+            <span class="breadcrumb_last" aria-current="page">Контакти</span>
+          </span>
+        </span>
+      </div>
+    </div>
+
+    <section class="contacts _inner-section">
+      <div class="_container">
+        <div class="contacts__wrapper">
+          <div class="section-header contacts__header">
+            <div class="section-header__subtitle">
+              <p>Наші дані</p>
+            </div>
+
+            <h1 class="section-header__title">Контакти</h1>
+          </div>
+
+          <div class="contacts__main">
+            <ul class="contacts-list">
+              <li class="contacts-list__li">
+                <div class="contacts-list__item">
+                  <div class="contacts-list__label">
+                    <img
+                      src="./assets/img/contacts/contacts-1.svg"
+                      alt="location"
+                    />
+                  </div>
+
+                  <div class="contacts-list__info">
+                    <p class="contacts-list__title">Адреса:</p>
+
+                    <div class="contacts-list__values">
+                      <a
+                        href="https://goo.gl/maps/YKSgoAP9v7jtmYGt8"
+                        target="_blank"
+                        class="contacts-list__link"
+                        >г. Киев, улица Название улицы.</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <li class="contacts-list__li">
+                <div class="contacts-list__item">
+                  <div class="contacts-list__label">
+                    <img
+                      src="./assets/img/contacts/contacts-2.svg"
+                      alt="email"
+                    />
+                  </div>
+
+                  <div class="contacts-list__info">
+                    <p class="contacts-list__title">Email:</p>
+
+                    <div class="contacts-list__values">
+                      <a
+                        href="mailto:main@caravanluxe.com"
+                        class="contacts-list__link"
+                        >main@caravanluxe.com</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <li class="contacts-list__li">
+                <div class="contacts-list__item">
+                  <div class="contacts-list__label">
+                    <img
+                      src="./assets/img/contacts/contacts-3.svg"
+                      alt="telephone"
+                    />
+                  </div>
+
+                  <div class="contacts-list__info">
+                    <p class="contacts-list__title">Телефон:</p>
+
+                    <div class="contacts-list__values">
+                      <a href="tel:+380661111111" class="contacts-list__link"
+                        >+38 066 111 1111</a
+                      >
+
+                      <a href="tel:+380931111111" class="contacts-list__link"
+                        >+38 093 111 1111</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <li class="contacts-list__li">
+                <div class="contacts-list__item">
+                  <div class="contacts-list__label">
+                    <img
+                      src="./assets/img/contacts/contacts-4.svg"
+                      alt="schedule"
+                    />
+                  </div>
+
+                  <div class="contacts-list__info">
+                    <p class="contacts-list__title">Графік:</p>
+
+                    <div class="contacts-list__values">
+                      <p class="contacts-list__paragraph">
+                        Пн-Пт з 9:00 до 20:00
+                      </p>
+                      <p class="contacts-list__paragraph">
+                        Сб-Вс з 10:00 до 17:00
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+
+            <div class="contacts-map">
+              <div class="contacts-map__iframe">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d325519.5893533362!2d30.202346793709502!3d50.401567780707296!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cf4ee15a4505%3A0x764931d2170146fe!2z0JrQuNC10LIsIDAyMDAw!5e0!3m2!1sru!2sua!4v1687254008215!5m2!1sru!2sua"
+                  allowfullscreen=""
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="_container">
+        <div class="footer__wrapper">
+          <div class="footer__item footer__logo__container">
+            <a href="#" class="logo-link footer__logo">
+              <img src="./assets/img/logo-white.svg" alt="logo" />
+            </a>
+
+            <p class="footer__logo__additional">ПП Трайдент Караванс</p>
+          </div>
+
+          <nav class="footer__item footer-menu">
+            <ul class="footer-menu__list">
+              <div class="footer-menu__col">
+                <li class="footer-menu__li">
+                  <a href="#" class="footer-menu__item"> Головна </a>
+                </li>
+                <li class="footer-menu__li">
+                  <a href="#" class="footer-menu__item"> Про нас </a>
+                </li>
+                <li class="footer-menu__li">
+                  <a href="#" class="footer-menu__item"> Продукція </a>
+                </li>
+              </div>
+
+              <div class="footer-menu__col">
+                <li class="footer-menu__li">
+                  <a href="#" class="footer-menu__item"> Портфоліо </a>
+                </li>
+                <li class="footer-menu__li">
+                  <a href="#" class="footer-menu__item"> Контакти </a>
+                </li>
+                <li class="footer-menu__li">
+                  <a href="#" class="footer-menu__item"> FAQ </a>
+                </li>
+              </div>
+            </ul>
+          </nav>
+
+          <div class="footer__item footer__contacts">
+            <div class="call__list footer__call__list">
+              <div class="call__item">
+                <a href="#" class="call__messanger">
+                  <img
+                    src="./assets/img/contacts-telegram.svg"
+                    alt="telegram"
+                  />
+                </a>
+                <a href="tel:0961708080" class="call__phone"
+                  >+38 097 050 00 33</a
+                >
+              </div>
+            </div>
+
+            <a href="mailto:main@caravanluxe.com" class="footer__link"
+              >main@caravanluxe.com</a
+            >
+
+            <a
+              href="https://goo.gl/maps/LHqsbpeSmQS4KC2J9"
+              target="_blank"
+              class="footer__link"
+              >Україна, Запорізька обл. Мелітополь, вул. Шмідта, 71/1</a
+            >
+          </div>
+
+          <div class="footer__item footer__other">
+            <ul class="socials footer__socials">
+              <li>
+                <a href="#" class="socials__item">
+                  <img
+                    src="./assets/img/socials/facebook.svg"
+                    alt="facebook"
+                  />
+                </a>
+              </li>
+
+              <li>
+                <a href="#" class="socials__item">
+                  <img
+                    src="./assets/img/socials/instagram.svg"
+                    alt="instagram"
+                  />
+                </a>
+              </li>
+
+              <li>
+                <a href="#" class="socials__item">
+                  <img src="./assets/img/socials/youtube.svg" alt="youtube" />
+                </a>
+              </li>
+            </ul>
+
+            <p class="footer__copyrights">
+              Trident Caravans © 2011-2022. Trident™ is the registered trade
+              mark of Caravan Luxe plc.
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
